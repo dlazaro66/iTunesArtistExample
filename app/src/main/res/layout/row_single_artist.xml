@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dlazaro66.itunesartistsexample.widget.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/row_background">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:elevation="2dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:transitionName="artist_cover_transition"
+                android:id="@+id/cover_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:src="@color/accent" />
+
+            <RelativeLayout
+                android:id="@+id/text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/translucent_black">
+
+                <TextView
+                    android:id="@+id/artist_name_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:capitalize="sentences"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="6dp"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:text="Aerosmith" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</com.dlazaro66.itunesartistsexample.widget.SquareRelativeLayout>
